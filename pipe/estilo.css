@@ -1,0 +1,71 @@
+*{
+    box-sizing: border-box;
+}
+
+body{
+    margin: 0;
+    font-family: sans-serif;
+    padding: 30px;
+}
+
+.formulario{
+    width: 800px;
+    max-width:100%;
+    margin: auto;
+    margin-top: 30px;
+    padding: 50px;
+    box-shadow: 0 0 20px 1px rgba(0,0,0,0.3);
+    position: relative;
+    background: rgba(147,74,85,0.2);
+}
+
+.titulo{
+    text-align: center;
+    margin-top: 0;
+    color:rgba(0,0,0,0.7);
+    font-size:1.3em;
+    padding: 20px;
+}
+
+.form_input, .form_label, .submit{
+    width: 100%;
+    margin-bottom:40px;
+}
+
+.form_input{
+    padding: 20px;
+    background: rgba(147,74,85,0.2);
+    border: 1px solid rgba(0,0,0,0.3);
+    margin-bottom:40px;
+}
+
+.form_label{
+    padding-left: 15px;
+    position: absolute;
+    margin-top:-85px;
+    z-index: -20;
+    color: rgba(0,0,0,0.6);
+
+}
+
+.submit{
+    background: rgba(0,0,0,0.6);
+    color: white;
+    padding: 10px 20px;
+    cursor: pointer;
+    border:none;
+}
+
+.form_input:focus{
+    outline: 1px solid rgba(0,0,0,0.7);
+
+}
+
+.form_input:focus + .form_label{
+    margin-top: -130px;
+
+}
+
+.quedar{
+    margin-top:-135px;
+}

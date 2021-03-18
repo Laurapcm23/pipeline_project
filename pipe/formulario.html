@@ -1,0 +1,94 @@
+<!DOCTYPE HTML>
+
+<html lang = "es">
+
+   <head>
+
+   	  <meta charset="UTF-8">
+   	  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+   	  <link rel ="stylesheet" type = "text/css" href="alertify/css/alertify.css">
+
+   	  <link rel ="stylesheet" type = "text/css" href="alertify/css/themes/default.css">
+
+   	  <script src = "alertify/jquery-3.5.1.min.js"></script>
+   	  <script src = "alertify/alertify.js"></script>
+
+   	  <link type= "text/css" rel="stylesheet" href="css/bootstrap.min.css">
+
+     	<title>Formulario</title>
+
+    	<link rel = "stylesheet" href = "estilo.css">
+   </head>
+
+   <body>
+
+   	<form name="form" action= "" class="formulario">
+   		<h1 class="titulo">Formulario</h1>
+
+   		<input type = "text" name= "nombre" id="nam" border = "border-danger" class="form_input"></input>
+   		<label for =""
+   		class="form_label">Nombre</label>
+   		
+   		<input type = "text" name= "apellido" id="ape" border = "border-danger" class="form_input"></input>
+   		<label for = ""
+   		class="form_label">Apellido</label>
+
+   		<input type = "text" name= "cedula" id= "ce" border ="border-danger"  maxlength="13" onkeyup ="mascara();" onkeypress=" return solonumeros(event)" onpaste ="return false"
+   		class="form_input"></input>
+   		<label for=""
+   		 class="form_label">Cedula</label>
+
+   		<input type = "email" name= "correo" id = "cor" border ="border-danger" class="form_input"></input>
+   		<label for = ""
+   		 class="form_label">Correo electronico</label>
+
+   		<input type="submit" class="submit" onclick =" return validar(event)"
+   		value = "Enviar"/>
+   		
+   	</form>
+
+   	<script>
+   		//---------------------------------------
+//         SOLO NUMEROS
+//----------------------------------------
+
+function solonumeros(e){
+	key= e.keyCode || e.which;
+	teclado = String.fromCharCode(key);
+	numeros = "0123456789";
+	especial = "8-37-38-46";
+	teclado_especial = false;
+
+	for(var i in especial){
+
+		if(key==especial[i]){
+			teclado_especial=true;
+		}
+	}
+	if(numeros.indexOf(teclado)== -1 && !teclado_especial){
+		return false;
+	}
+
+}
+   	</script>
+
+   	<script src="form.js"></script>
+
+   	<script src="https://cdn.rawgit.com/PascaleBeier/bootstrap-validate/v2.2.0/dist/bootstrap-validate.js" ></script>
+
+   	<script>
+   		bootstrapValidate('#nam','min:1: Campo obligatorio')
+   		bootstrapValidate('#ape','min:1:Campo obligatorio')
+   		bootstrapValidate('#ce','min:1: Campo obligatorio')
+   		bootstrapValidate('#cor','min:1: Campo obligatorio')
+   	</script>
+
+   	<script src="js/jquery-3.5.1.min.js"></script>
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <script src="js/popper.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+ 
+   </body>
+
+</html>

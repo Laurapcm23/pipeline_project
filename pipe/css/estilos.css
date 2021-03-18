@@ -1,0 +1,17 @@
+//--------------------------------
+//            ESTILOS
+//--------------------------------
+
+body {
+  background: #A9A9A9; }
+
+
+footer{
+	width:180;
+	height:200px;
+	background: black;
+	color: white;
+	display: flex;
+	justify-content: flex-start;
+}
+
